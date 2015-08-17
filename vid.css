@@ -34,6 +34,10 @@
     width: 350px;
 }
 
+.score, .spm_tekst, .correctliste {
+    color:white;
+}
+
 #overlay {
     background-color: rgba(0, 113, 128, 0.5);
     position: relative;
@@ -99,7 +103,7 @@ td {
 .introknap {
     cursor: pointer;
 }
-
+/*Hej + Hallo fra Anders*/
 .svar_btn {
     margin-bottom: 11px;
     white-space: normal !important;
