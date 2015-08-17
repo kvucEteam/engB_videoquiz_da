@@ -37,6 +37,7 @@ var intro_header;
 var intro_knap;
 var intro_text;
 
+/* hejsa */
 
 
 //Indhold kun til den 'rene' player: 
