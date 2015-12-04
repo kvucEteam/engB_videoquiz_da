@@ -45,6 +45,14 @@
     color: white;
 }
 
+.introknap,
+.btn_videre,
+.videre_knap,
+.forfra_knap {
+    background-color: transparent;
+    color:white;
+}
+
 .popud {
     left: 0;
     margin: 0 auto;
@@ -110,17 +118,7 @@ td {
     width: 100%;
 }
 
-.btn_chosen {
-    background-color: #1da6db;
-    border: 1px solid #1da6db;
-    color: white;
-}
 
-.btn_chosen:hover {
-    background-color: #1da6db;
-    border: 1px solid #1da6db;
-    color: white;
-}
 
 .feed_txt {
     color: white;
@@ -144,6 +142,9 @@ table {
     margin-bottom: 0px;
 }
 
+
+
+
 #time_bar {
     background-color: white;
     bottom: 0;
@@ -159,7 +160,6 @@ table {
     margin-bottom: 10px;
     margin-top: 30px;
     padding: 7px 19px;
-    background-color: #0dcea0;
 }
 
 .correctliste {
@@ -171,4 +171,5 @@ table {
     height: 75%;
     overflow-y: auto;
     overflow-x: hidden;
+    margin-top: 10%;
 }
