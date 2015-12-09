@@ -191,6 +191,7 @@ function setupplayer() {
             'id': 'ytPlayer',
             'enablejsapi': 1,
             'allowScriptAccess': 'always',
+            'mediaPlaybackRequiresUserAction': false,
             'version': 3,
             'controls': 0,
             'showinfo': 0,
@@ -222,20 +223,15 @@ function setupplayer() {
 
                 total_spille_tid = minutes + ":" + seconds;
 
-
                 // VI Tjekker hver 200 ms om videoen skal stoppes..: 
                 console.log("on ready");
                 checkTimer = setInterval(timerCheck, 200);
-
-
             }
         }
     });
     $(".popud").css("width", popudwidth);
     $(".popud").css("left", popud_left);
 }
-
-
 
 /// Herunder er scriptet identisk med vid_new_web.js
 
@@ -245,8 +241,9 @@ function timerCheck() {
 
     //Gør overlay og timebar responsive:
     var embed_height = $(".embed-responsive").css("height");
-    $("#overlay").css("height", embed_height); //                    $("#time_bar").css("width", player.getCurrentTime() * 10 + "px");
-    $("#time_bar").css("width", (player.getCurrentTime() / player.getDuration()) * window.innerWidth);
+    $("#overlay").css("height", embed_height); 
+    //$("#time_bar").css("width", player.getCurrentTime() * 10 + "px");
+   $("#time_bar").css("width", (player.getCurrentTime() / player.getDuration()) * $(".embed-responsive-16by9").width());
 
     //Udregn minutter og sekunder til timebar:
     var s = playTime - (m * 60);
@@ -311,7 +308,7 @@ function introscreen() {
         });
 
         if (navigator.platform.indexOf("iPad") != -1 || navigator.platform.indexOf("iPhone") != -1) {
-
+resumeVideo();
         } else {
             resumeVideo();
         }
